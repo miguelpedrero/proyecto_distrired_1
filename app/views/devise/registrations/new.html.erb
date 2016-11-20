@@ -1,10 +1,14 @@
-<h2>Sign up</h2>
+<body class="container">
+  
+<div class="tabla col-md-6 col-md-offset-3 img-rounded">
+
+<h2>REGISTRAR</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
 
@@ -32,3 +36,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+
+</body>
