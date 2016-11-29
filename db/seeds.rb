@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Commune.destroy_all
+
+# COMUNAS
+Commune.create([{name:'Santiago'},{name:'La Dehesa'},{name:'La Florida'}])
