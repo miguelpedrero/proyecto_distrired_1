@@ -8,7 +8,12 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :role %><br />
+    <%= f.select :role, [["admin"], ["dis"], ["pro"], ["cliente"]],{prompt: "Elegir ROL"}%>
+  </div>
+
+  <div class="field">
+    <%= f.label(:name, "NOMBRE") %><br />
     <%= f.text_field :name %>
   </div>
 
@@ -20,6 +25,10 @@
   <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address %>
+  </div>
+    <div class="field">
+    <%= f.label :commune %><br />
+    <%= f.collection_select(:commune_id, Commune.all, :id, :name,{prompt: "Elegir Comuna"}) %>
   </div>
 
   <div class="field">
@@ -48,5 +57,7 @@
 <%= render "devise/shared/links" %>
 
 </div>
+
+
 
 </body>

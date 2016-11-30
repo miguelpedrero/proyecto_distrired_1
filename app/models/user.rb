@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-belongs_to :communes
+belongs_to :commune
 
   before_create :assign_default_role
 
