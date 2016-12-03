@@ -29,6 +29,10 @@
             <li></li>
             <!-- <li><%= link_to "SALIR", destroy_user_session_path, method: :delete %></li> -->
             <li class="navbar-right">  <a href="<%= destroy_user_session_path %>" data-method='delete'>SALIR</a>  </li>
+
+            <li class="navbar-right">  <a href="<%= edit_user_registration_path %>">PERFIL</a>  </li>
+            
+
             <li><a href="<%= users_path %>"> USUARIOS</a></li>
             <li>Hola <%= current_user.name %> <br> <%= current_user.email %> </li>
           <% else %>
