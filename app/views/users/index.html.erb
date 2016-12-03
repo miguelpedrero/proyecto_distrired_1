@@ -1,0 +1,33 @@
+<div class="container tabla">
+
+<h1>Lista de Usuario</h1>
+
+<div class="table-responsive">
+  <table class="table">
+
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Dirección</th>
+      <th>Comuna</th>
+      <th>Telefono</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.role %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.address %></td>
+        <td><%= user.commune.try(:name) %></td>
+        <td><%= user.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</div>

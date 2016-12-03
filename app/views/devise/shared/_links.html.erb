@@ -1,3 +1,6 @@
+<div class="container tabla col-md-6 col-md-offset-3">
+
+
 <%- if controller_name != 'sessions' %>
   <button> <%= link_to "INGRESO DE USUARIO", new_session_path(resource_name) %> </button><br />
 <% end -%>
@@ -23,3 +26,6 @@
     <%= link_to "Inicia sesión con #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 <% end -%>
+
+</div>
+
