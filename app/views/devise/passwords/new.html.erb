@@ -1,6 +1,6 @@
 <body class="container">
   
-<div class="container tabla col-md-6 col-md-offset-3">
+<div class="container tabla col-md-6 col-md-offset-3 text-center">
 
 <h2>¿Olvidaste tu contraseña?</h2>
 
@@ -8,12 +8,12 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label(:email, "EMAIL", :class => "h4")%><br />
+    <%= f.email_field :email, autofocus: true , :placeholder => "Escribir Correo", :class => "form-control"%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Envíeme las instrucciones de contraseña de restablecimiento" %>
+    <%= f.submit "Envíeme las instrucciones de contraseña de restablecimiento", :class => "btn btn-info btn-sm btn-block"  %>
   </div>
 <% end %>
 

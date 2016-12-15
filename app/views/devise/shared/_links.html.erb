@@ -1,12 +1,12 @@
-<div class="container tabla col-md-6 col-md-offset-3">
+<div class="container tabla col-md-12 text-center ">
 
 
 <%- if controller_name != 'sessions' %>
-  <button> <%= link_to "INGRESO DE USUARIO", new_session_path(resource_name) %> </button><br />
+   <%= link_to "INGRESO DE USUARIO", new_session_path(resource_name), :class => "btn btn-primary btn-lg btn-block" %> <br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "REGISTRAR", new_registration_path(resource_name) %><br />
+  <%= link_to "REGISTRAR", new_registration_path(resource_name), :class => "btn btn-info btn-lg btn-block" %><br />
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
