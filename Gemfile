@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
+
+gem 'carrierwave'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -18,6 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'railroady', group: :development
 
+# gem 'cancancan'
 
 
 # Use jquery as the JavaScript library

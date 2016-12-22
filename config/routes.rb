@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :products
 
-  devise_for :users, controllers: { registrations: 'users/registrations'}
+  devise_for :users, controllers: { registrations: 'users/registrations'}, path_prefix: 'miguel'
   
-  resources :users , only: [:index, :new, :edit, :create, :update, :destroy, :show]
+  resources :users
+
   root to: "products#index"
 
 end
